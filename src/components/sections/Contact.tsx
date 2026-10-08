@@ -15,7 +15,7 @@ import { cn } from "../../utils/cn";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const WHATSAPP_NUMBER = "+584246734897";
+export const WHATSAPP_NUMBER = "+584120753682";
 
 const WA_NUMBER = WHATSAPP_NUMBER.replace(/\D/g, "");
 
