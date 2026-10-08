@@ -76,7 +76,7 @@ export const CtaSection = () => {
               ease: "power2.out",
               scrollTrigger: {
                 trigger: sectionRef.current,
-                start: "top 80%",
+                start: "top 89%",
                 once: true,
               },
             }
@@ -95,7 +95,7 @@ export const CtaSection = () => {
               delay: 0.08,
               scrollTrigger: {
                 trigger: sectionRef.current,
-                start: "top 70%",
+                start: "top 78%",
                 once: true,
               },
             }
