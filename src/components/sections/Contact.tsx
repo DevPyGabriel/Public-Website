@@ -583,7 +583,7 @@ export const Contact = () => {
                         name="destination"
                         type="text"
                         autoComplete="off"
-                        placeholder="Adónde te diriges"
+                        placeholder="A dónde te diriges"
                         value={form.destination}
                         aria-invalid={Boolean(errors.destination)}
                         aria-describedby={
