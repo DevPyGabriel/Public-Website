@@ -24,7 +24,7 @@ const faqs: FaqItem[] = [
   {
     question: "¿Qué zonas cubren?",
     answer:
-      "Atendemos prioritariamente la zona de Santo Domingo y sus alrededores. Si necesitas una zona distinta, contáctanos directamente para consultar cupo y disponibilidad en la zona que requieras; te confirmamos en breve.",
+      "Atendemos prioritariamente la zona de Sol amada y sus alrededores. Si necesitas una zona distinta, contáctanos directamente para consultar cupo y disponibilidad en la zona que requieras; te confirmamos en breve.",
   },
   {
     question: "¿Cuál vehículo brinda el servicio?",
