@@ -28,23 +28,31 @@ export const Hero = () => {
                     <div className='mt-6 sm:mt-8'>
                       <div className='flex items-center gap-y-1.5 gap-x-3 flex-wrap'>
 
-                        <div className='text-sm sm:text-base md:text-lg tracking-tight bg-lime-300 text-black font-medium rounded-full 
+                        <a
+                          href="#contacto"
+                          className='text-sm sm:text-base md:text-lg tracking-tight bg-lime-300 text-black font-medium rounded-full 
                         px-3 py-2 sm:px-4 sm:py-3 md:px-6 md:py-3 
                         flex items-center gap-1.5 sm:gap-2 cursor-pointer
                         outline-2 outline-offset-3 outline-transparent
-                        duration-300 hover:outline-lime-300'>
+                        transition-all duration-300 hover:-translate-y-0.5 hover:outline-lime-300 focus-visible:ring-2 focus-visible:ring-lime-300 focus-visible:ring-offset-2 focus-visible:ring-offset-black'
+                          aria-label="Solicitar traslado"
+                        >
                           <span className='leading-none'>Solicitar Traslado</span>
                           <MousePointerClick className='size-4 sm:size-5 lg:size-6'/>
-                        </div>
+                        </a>
 
-                        <div className='text-sm sm:text-base md:text-lg tracking-tight 
+                        <a
+                          href="#servicios"
+                          className='text-sm sm:text-base md:text-lg tracking-tight 
                         pl-3 md:pl-6 pr-3.5 py-2 sm:pr-3.5 sm:py-3 md:pr-5 
                         flex items-center gap-1.5 sm:gap-2 bg-gray-50 cursor-pointer rounded-full text-black font-medium
                         outline-2 outline-offset-3 outline-transparent
-                        duration-300 hover:outline-white'>
+                        transition-all duration-300 hover:-translate-y-0.5 hover:outline-white focus-visible:ring-2 focus-visible:ring-neutral-800 focus-visible:ring-offset-2'
+                          aria-label="Ver servicios"
+                        >
                           <span className='leading-none'>Ver Servicios</span>
                           <ArrowUpRight className='size-4 sm:size-5 lg:size-6'/>
-                        </div>
+                        </a>
                       </div>
                     </div>
                   </div>

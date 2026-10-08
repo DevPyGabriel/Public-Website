@@ -272,7 +272,7 @@ export const Faq = () => {
               className="group inline-flex w-fit items-center gap-1.5 rounded-full bg-neutral-800 px-5 py-2.5 pr-4 text-base font-medium tracking-tight text-gray-100 outline-2 outline-offset-3 outline-transparent transition-all duration-300 hover:-translate-y-0.5 hover:outline-neutral-800 focus-visible:ring-2 focus-visible:ring-neutral-800 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-100 sm:px-6 sm:py-3 sm:pr-5"
               aria-label="Ir a contacto para cotizar traslado"
             >
-              <span className="leading-none">Contactanos</span>
+              <span className="leading-none">Contáctanos</span>
               <ArrowUpRight className="size-4.5 transition-transform duration-300 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5 sm:size-5" />
             </a>
           </div>
