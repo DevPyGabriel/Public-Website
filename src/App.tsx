@@ -1,10 +1,12 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
 import { Header } from "./components/layout/Header";
+import { Footer } from "./components/layout/Footer";
 import { Hero } from "./components/sections/Hero";
 import Services from "./components/sections/Services";
 import BookingProcess from "./components/sections/BookingProcess";
 import Faq from "./components/sections/Faq";
+import CtaSection from "./components/sections/CtaSection";
 import Contact from "./components/sections/Contact";
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
       <BookingProcess />
       <Faq />
       <Contact />
+      <CtaSection />
+      <Footer />
     </div>
   );
 }

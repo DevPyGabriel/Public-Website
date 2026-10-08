@@ -17,6 +17,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const WHATSAPP_NUMBER = "+584246734897";
 
+const WA_NUMBER = WHATSAPP_NUMBER.replace(/\D/g, "");
+
 const SERVICE_OPTIONS = [
   "Taxi Express",
   "Transporte Escolar",
@@ -259,8 +261,8 @@ export const Contact = () => {
 
   const openWhatsApp = (current: FormState) => {
     const text = encodeURIComponent(buildMessage(current));
-    const base = WHATSAPP_NUMBER
-      ? `https://wa.me/${WHATSAPP_NUMBER}`
+    const base = WA_NUMBER
+      ? `https://wa.me/${WA_NUMBER}`
       : "https://wa.me/";
     const url = `${base}?text=${text}`;
 
@@ -346,8 +348,8 @@ export const Contact = () => {
 
               <a
                 href={
-                  WHATSAPP_NUMBER
-                    ? `https://wa.me/${WHATSAPP_NUMBER}`
+                  WA_NUMBER
+                    ? `https://wa.me/${WA_NUMBER}`
                     : "https://wa.me/"
                 }
                 target="_blank"

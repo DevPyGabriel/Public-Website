@@ -19,7 +19,7 @@ export interface HeaderProps extends ComponentProps {
 const DEFAULT_ITEMS: HeaderNavItem[] = [
   { label: "Inicio", href: "#inicio" },
   { label: "Servicios", href: "#servicios" },
-  { label: "FAQs", href: "#faqs" },
+  { label: "FAQs", href: "#preguntas-frecuentes" },
   { label: "Contacto", href: "#contacto" },
 ];
 
