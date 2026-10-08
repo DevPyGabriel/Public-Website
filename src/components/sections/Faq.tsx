@@ -24,7 +24,12 @@ const faqs: FaqItem[] = [
   {
     question: "¿Qué zonas cubren?",
     answer:
-      "Cubriendo principalmente la zona de Santo Domingo y alrededores. Si tienes una ruta fuera de la zona habitual, indícanos los detalles en la cotización y te confirmamos la cobertura.",
+      "Atendemos prioritariamente la zona de Santo Domingo y sus alrededores. Si necesitas una zona distinta, contáctanos directamente para consultar cupo y disponibilidad en la zona que requieras; te confirmamos en breve.",
+  },
+  {
+    question: "¿Cuál vehículo brinda el servicio?",
+    answer:
+      "Brindamos el servicio en una Dodge Journey: un vehículo espacioso, con capacidad para 7 puestos y un aire acondicionado en excelente estado para que viajes fresco y cómodo. Su interior amplio hace de cada trayecto una experiencia agradable, ya sea para un traslado express, una ruta escolar o movilizar a todo un grupo.",
   },
   {
     question: "¿Con cuánta anticipación debo reservar?",
@@ -35,11 +40,6 @@ const faqs: FaqItem[] = [
     question: "¿Qué formas de pago aceptan?",
     answer:
       "Trabajamos con acuerdo previo según el tipo de servicio. Los traslados puntuales suelen ser por viaje. Las rutas programadas (escolar, universitario o empresarial) se organizan con pago mensual o cada 15 días, según lo acordado.",
-  },
-  {
-    question: "¿Puedo cancelar o reprogramar mi traslado?",
-    answer:
-      "Sí. Para traslados puntuales, te pedimos avisar con la mayor anticipación posible. Para servicios recurrentes, aplicamos lo acordado al momento de la contratación para no afectar la logística del resto de rutas.",
   },
   {
     question: "¿Es seguro el servicio para menores de edad?",
