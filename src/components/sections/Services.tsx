@@ -290,7 +290,7 @@ export const Services = () => {
 
                     <div className="flex items-end gap-4 flex-col sm:flex-row md:flex-col lg:flex-row w-full justify-between">
                       <div className="mt-4 md:mt-6 lg:mt-8">
-                        <p className="text-sm text-neutral-400 sm:text-base">
+                        <p className="text-sm text-neutral-400 sm:text-base font-light">
                           {service.description}
                         </p>
                         <p className="mt-3 text-sm text-neutral-300">
