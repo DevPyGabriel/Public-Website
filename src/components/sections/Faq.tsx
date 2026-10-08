@@ -263,7 +263,7 @@ export const Faq = () => {
             ref={ctaRef}
             className="flex flex-col items-start gap-5"
           >
-            <p className="max-w-xl text-sm text-neutral-600 sm:text-base">
+            <p className="max-w-xl text-sm font-light text-neutral-600 sm:text-base">
               ¿Tienes una duda específica sobre tu ruta o servicio?
             </p>
 
