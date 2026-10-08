@@ -76,7 +76,7 @@ export const CtaSection = () => {
               ease: "power2.out",
               scrollTrigger: {
                 trigger: sectionRef.current,
-                start: "top 89%",
+                start: "top 93%",
                 once: true,
               },
             }
@@ -86,11 +86,11 @@ export const CtaSection = () => {
         if (secondaryCta) {
           gsap.fromTo(
             secondaryCta,
-            { opacity: 0, y: 24 },
+            { opacity: 0, y: 20 },
             {
               opacity: 1,
               y: 0,
-              duration: 1,
+              duration: 0.7,
               ease: "power2.out",
               scrollTrigger: {
                 trigger: sectionRef.current,
