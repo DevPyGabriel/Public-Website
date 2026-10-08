@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Instrument+Serif:ital@0;1&display=swap');
+@import "tailwindcss";
+
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-2xs: 380px;
+  --breakpoint-xs: 480px;
+
+  --font-geist: Geist, system-ui, -apple-system, sans-serif;
+  --font-instrument: "Instrument Serif", serif;
+
+  --animate-fade-in: fadeIn 0.5s ease-in-out;
+  --animate-slide-up: slideUp 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.background-img {
+  background-image:
+    linear-gradient(rgba(17, 17, 17, 0), rgba(17, 17, 17, 0.95)),
+    url("./assets/hero_image.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+section[id],
+[data-nav-section] {
+  scroll-margin-top: 6rem;
+}
+
+@media (max-width: 640px) {
+  .background-img {
+    background-position: 55% center;
+  }
+}
