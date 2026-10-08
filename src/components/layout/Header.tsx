@@ -165,7 +165,7 @@ export const Header = ({
     const previousOverflow = root.style.overflow;
     root.style.overflow = "hidden";
 
-    panelRef.current?.querySelector<HTMLElement>("a[href]")?.focus();
+    panelRef.current?.focus();
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -349,7 +349,8 @@ export const Header = ({
             role="dialog"
             aria-modal="true"
             aria-label="Menú de navegación"
-            className="absolute inset-x-0 top-full z-50 mt-3 px-6 sm:px-12 lg:px-8 md:hidden"
+            className="absolute inset-x-0 top-full z-50 mt-3 px-6 sm:px-12 lg:px-8 md:hidden outline-none"
+            tabIndex={-1}
           >
             <div className="mx-auto max-h-[calc(100dvh-5rem)] max-w-[800px] overflow-y-auto overscroll-contain rounded-[24px] bg-neutral-800 p-2">
 
