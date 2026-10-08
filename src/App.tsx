@@ -5,6 +5,7 @@ import { Hero } from "./components/sections/Hero";
 import Services from "./components/sections/Services";
 import BookingProcess from "./components/sections/BookingProcess";
 import Faq from "./components/sections/Faq";
+import Contact from "./components/sections/Contact";
 
 function App() {
   useEffect(() => {
@@ -26,6 +27,7 @@ function App() {
       <Services />
       <BookingProcess />
       <Faq />
+      <Contact />
     </div>
   );
 }
