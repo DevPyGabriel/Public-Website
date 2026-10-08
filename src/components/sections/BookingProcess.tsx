@@ -140,7 +140,7 @@ export const BookingProcess = () => {
               delay: index * 0.05,
               scrollTrigger: {
                 trigger: step,
-                start: "top 80%",
+                start: "top 93%",
                 once: true,
               },
             }

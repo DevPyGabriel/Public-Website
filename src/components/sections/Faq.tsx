@@ -139,7 +139,7 @@ export const Faq = () => {
               delay: index * 0.05,
               scrollTrigger: {
                 trigger: item,
-                start: "top 85%",
+                start: "top 100%",
                 once: true,
               },
             }
