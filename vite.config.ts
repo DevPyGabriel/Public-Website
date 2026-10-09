@@ -37,7 +37,7 @@ Sitemap: ${origin}/sitemap.xml
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
   const siteUrl =
-    env.VITE_SITE_URL || "https://novadrive.vercel.app";
+    env.VITE_SITE_URL || "https://novadrive-ve.vercel.app";
 
   return {
     plugins: [react(), tailwindcss(), seoFiles(siteUrl)],
