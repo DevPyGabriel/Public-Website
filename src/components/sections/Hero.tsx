@@ -7,11 +7,11 @@ export const Hero = () => {
       <div className='min-h-dvh w-full text-neutral-800'>
         <div className='w-full min-h-dvh grid grid-rows-[2.35fr_1fr] grid-cols-[0.075fr_1fr_1fr_0.075fr] md:grid-cols-[0.05fr_1fr_1fr_0.05fr] md:grid-rows-[2.5fr_1fr] divide-x divide-y divide-white/25  background-img'>
 
-          <div className=''>
+          <div className='border-x-transparent'>
             
           </div>
 
-          <div className='col-span-2 h-full'>
+          <div className='col-span-2 h-full border-r-transparent'>
             <div className=' px-4 pb-4 xs:pb-8 sm:pb-12 pt-16 sm:pt-18 h-full'>
 
               <div className='w-full h-full flex flex-col items-center justify-center my-auto'>
@@ -26,12 +26,12 @@ export const Hero = () => {
                       Desde viajes express hasta rutas programadas para colegios, universidades y empresas. Una solución de transporte cómoda, puntual y adaptada a tus necesidades.
                     </p>
                     <div className='mt-6 sm:mt-8'>
-                      <div className='flex items-center gap-y-1.5 gap-x-3 flex-wrap'>
+                      <div className='flex items-center gap-y-2.5 gap-x-3 flex-wrap'>
 
                         <a
                           href="#contacto"
                           className='text-sm sm:text-base md:text-lg tracking-tight bg-lime-300 text-black font-medium rounded-full 
-                        px-3 py-2 sm:px-4 sm:py-3 md:px-6 md:py-3 
+                        px-4 py-2.5 sm:px-4.5 sm:py-3 md:px-6 md:py-3 
                         flex items-center gap-1.5 sm:gap-2 cursor-pointer
                         outline-2 outline-offset-3 outline-transparent
                         transition-all duration-300 hover:-translate-y-0.5 hover:outline-lime-300 focus-visible:ring-2 focus-visible:ring-lime-300 focus-visible:ring-offset-2 focus-visible:ring-offset-black'
@@ -44,7 +44,7 @@ export const Hero = () => {
                         <a
                           href="#servicios"
                           className='text-sm sm:text-base md:text-lg tracking-tight 
-                        pl-3 md:pl-6 pr-3.5 py-2 sm:pr-3.5 sm:py-3 md:pr-5 
+                        pl-4.5 md:pl-6 pr-3.5 py-2.5 sm:pr-4.5 sm:pl-5 sm:py-3 md:pr-5 
                         flex items-center gap-1.5 sm:gap-2 bg-gray-50 cursor-pointer rounded-full text-black font-medium
                         outline-2 outline-offset-3 outline-transparent
                         transition-all duration-300 hover:-translate-y-0.5 hover:outline-white focus-visible:ring-2 focus-visible:ring-neutral-800 focus-visible:ring-offset-2'
@@ -62,7 +62,7 @@ export const Hero = () => {
             </div>
           </div>
 
-          <div className='border-r border-r-transparent'>
+          <div className='border-x border-x-transparent'>
             
           </div>
 

@@ -54,7 +54,7 @@ export const BookingProcess = () => {
   const headerRef = useRef<HTMLDivElement | null>(null);
   const progressTrackRef = useRef<HTMLDivElement | null>(null);
   const progressLineRef = useRef<HTMLDivElement | null>(null);
-  const stepsContainerRef = useRef<HTMLDivElement | null>(null);
+  const stepsContainerRef = useRef<HTMLOListElement | null>(null);
   const stepRefs = useRef<HTMLDivElement[]>([]);
   const ctaRef = useRef<HTMLDivElement | null>(null);
 
@@ -260,101 +260,101 @@ export const BookingProcess = () => {
             </p>
           </div>
 
-          {/* STEPPER - DESKTOP HORIZONTAL */}
-          <div className="relative hidden md:block" ref={stepsContainerRef}>
-            {/* CONNECTOR TRACK: dashed rule so the line always breaks at each circle */}
-            <div
-              ref={progressTrackRef}
-              className="step-track pointer-events-none absolute left-6 right-6 top-8 hidden h-0.5 md:block lg:top-9"
-              aria-hidden="true"
-            >
-              {/* Progress fill grows inside the dashed mask, stopping on the last circle */}
+            {/* STEPPER - DESKTOP HORIZONTAL */}
+            <ol className="relative hidden md:block list-none" ref={stepsContainerRef}>
+              {/* CONNECTOR TRACK: dashed rule so the line always breaks at each circle */}
               <div
-                ref={progressLineRef}
-                className="h-full origin-left scale-x-0 bg-lime-300 will-change-transform"
-              />
-            </div>
+                ref={progressTrackRef}
+                className="step-track pointer-events-none absolute left-6 right-6 top-8 hidden h-0.5 md:block lg:top-9"
+                aria-hidden="true"
+              >
+                {/* Progress fill grows inside the dashed mask, stopping on the last circle */}
+                <div
+                  ref={progressLineRef}
+                  className="h-full origin-left scale-x-0 bg-lime-300 will-change-transform"
+                />
+              </div>
 
-            {/* STEPS GRID */}
-            <div className="relative grid grid-cols-4 gap-6 lg:gap-8">
+              {/* STEPS GRID */}
+              <div className="relative grid grid-cols-4 gap-6 lg:gap-8">
+                {steps.map((step, index) => {
+                  const Icon = step.icon;
+                  return (
+                    <li
+                      key={step.number}
+                      ref={(el) => setStepRef(el as HTMLDivElement | null, index)}
+                      className="relative flex flex-col items-start p-1 will-change-transform"
+                      data-step={step.number}
+                    >
+                      {/* NUMBER + ICON CIRCLE */}
+                      <div className="relative mb-6 flex items-center lg:mb-8">
+                        <div className="step-node">
+                          <span className="step-number">{step.number}</span>
+                          <Icon className="step-icon" aria-hidden="true" />
+                          <span className="step-ring" />
+                        </div>
+                      </div>
+
+                      {/* CONTENT */}
+                      <div className="flex flex-col gap-3 px-1">
+                        <h3 className="step-title text-xl tracking-[-0.03em] transition-colors duration-300 sm:text-2xl lg:text-[1.75rem]">
+                          {step.title}
+                        </h3>
+                        <p className="step-desc text-sm leading-normal text-neutral-400 transition-colors duration-300 sm:text-[0.95rem] lg:text-base font-light">
+                          {step.description}
+                        </p>
+                      </div>
+                    </li>
+                  );
+                })}
+              </div>
+            </ol>
+
+            {/* STEPPER - MOBILE VERTICAL */}
+            <ol className="relative flex flex-col gap-8 md:hidden list-none">
+              {/* VERTICAL CONNECTOR: dashed rule with a gap around every circle */}
+              <div
+                className="step-track step-track--vertical pointer-events-none absolute bottom-7.5 left-5.5 top-7.5 w-0.5 sm:bottom-8 sm:left-6 sm:top-8"
+                aria-hidden="true"
+              >
+                <div className="progress-vertical h-full w-full origin-top scale-y-0 bg-lime-300 will-change-transform" />
+              </div>
+
               {steps.map((step, index) => {
                 const Icon = step.icon;
                 return (
-                  <div
+                  <li
                     key={step.number}
-                    ref={(el) => setStepRef(el, index)}
-                    className="relative flex flex-col items-start p-1 will-change-transform"
+                    ref={(el) => setStepRef(el as HTMLDivElement | null, index)}
+                    className="relative flex items-start p-2 pl-0 will-change-transform sm:gap-5"
                     data-step={step.number}
                   >
-                    {/* NUMBER + ICON CIRCLE */}
-                    <div className="relative mb-6 flex items-center lg:mb-8">
+                    {/* CIRCLE (same node design as desktop) + spacer for the connector gap */}
+                    <div className="relative z-10 flex shrink-0 items-center">
                       <div className="step-node">
                         <span className="step-number">{step.number}</span>
                         <Icon className="step-icon" aria-hidden="true" />
                         <span className="step-ring" />
                       </div>
+                      <span
+                        className="absolute left-1/2 top-1/2 h-7 w-7 -translate-x-1/2 -translate-y-1/2 sm:h-8 sm:w-8"
+                        aria-hidden="true"
+                      />
                     </div>
 
                     {/* CONTENT */}
-                    <div className="flex flex-col gap-3 px-1">
-                      <h3 className="step-title text-xl tracking-[-0.03em] transition-colors duration-300 sm:text-2xl lg:text-[1.75rem]">
+                    <div className="flex min-w-0 flex-col gap-2 pt-0.5 pl-4 sm:pl-5">
+                      <h3 className="step-title text-lg font-medium tracking-[-0.03em] transition-colors duration-300 sm:text-xl">
                         {step.title}
                       </h3>
-                      <p className="step-desc text-sm leading-normal text-neutral-400 transition-colors duration-300 sm:text-[0.95rem] lg:text-base font-light">
+                      <p className="step-desc text-sm leading-normal font-light text-neutral-400 transition-colors duration-300">
                         {step.description}
                       </p>
                     </div>
-                  </div>
+                  </li>
                 );
               })}
-            </div>
-          </div>
-
-          {/* STEPPER - MOBILE VERTICAL */}
-          <div className="relative flex flex-col gap-8 md:hidden">
-            {/* VERTICAL CONNECTOR: dashed rule with a gap around every circle */}
-            <div
-              className="step-track step-track--vertical pointer-events-none absolute bottom-7.5 left-5.5 top-7.5 w-0.5 sm:bottom-8 sm:left-6 sm:top-8"
-              aria-hidden="true"
-            >
-              <div className="progress-vertical h-full w-full origin-top scale-y-0 bg-lime-300 will-change-transform" />
-            </div>
-
-            {steps.map((step, index) => {
-              const Icon = step.icon;
-              return (
-                <div
-                  key={step.number}
-                  ref={(el) => setStepRef(el, index)}
-                  className="relative flex items-start p-2 pl-0 will-change-transform sm:gap-5"
-                  data-step={step.number}
-                >
-                  {/* CIRCLE (same node design as desktop) + spacer for the connector gap */}
-                  <div className="relative z-10 flex shrink-0 items-center">
-                    <div className="step-node">
-                      <span className="step-number">{step.number}</span>
-                      <Icon className="step-icon" aria-hidden="true" />
-                      <span className="step-ring" />
-                    </div>
-                    <span
-                      className="absolute left-1/2 top-1/2 h-7 w-7 -translate-x-1/2 -translate-y-1/2 sm:h-8 sm:w-8"
-                      aria-hidden="true"
-                    />
-                  </div>
-
-                  {/* CONTENT */}
-                  <div className="flex min-w-0 flex-col gap-2 pt-0.5 pl-4 sm:pl-5">
-                    <h3 className="step-title text-lg font-medium tracking-[-0.03em] transition-colors duration-300 sm:text-xl">
-                      {step.title}
-                    </h3>
-                    <p className="step-desc text-sm leading-normal font-light text-neutral-400 transition-colors duration-300">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+            </ol>
 
           {/* CTA */}
           <div

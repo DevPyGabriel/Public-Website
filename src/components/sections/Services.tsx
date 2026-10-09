@@ -242,76 +242,77 @@ export const Services = () => {
 
           {/* RIGHT / SERVICES */}
           <div ref={servicesRef} className="w-full md:w-[62%]">
-            <div className="flex flex-col gap-10 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16">
+            <ul className="flex flex-col gap-10 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16 list-none">
               {services.map((service) => (
-                <article
-                  key={service.number}
-                  className="service-card group overflow-hidden bg-black rounded-2xl cursor-pointer hover:bg-black/40 transition-colors duration-200 ease-in-out opacity-100 will-change-transform"
-                >
-                  {/* IMAGE */}
-                  <div className="relative aspect-video overflow-hidden bg-neutral-800">
-                    <img
-                      src={service.image}
-                      width={service.imageWidth}
-                      height={service.imageHeight}
-                      alt={service.alt}
-                      loading={service.number === "01" ? "eager" : "lazy"}
-                      fetchPriority={
-                        service.number === "01" ? "high" : undefined
-                      }
-                      decoding="async"
-                      className="service-image absolute inset-0 h-full w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
-                    />
+                <li key={service.number}>
+                  <article
+                    className="service-card group overflow-hidden bg-black rounded-2xl cursor-pointer hover:bg-black/40 transition-colors duration-200 ease-in-out opacity-100 will-change-transform"
+                  >
+                    {/* IMAGE */}
+                    <div className="relative aspect-video overflow-hidden bg-neutral-800">
+                      <img
+                        src={service.image}
+                        width={service.imageWidth}
+                        height={service.imageHeight}
+                        alt={service.alt}
+                        loading={service.number === "01" ? "eager" : "lazy"}
+                        fetchPriority={
+                          service.number === "01" ? "high" : undefined
+                        }
+                        decoding="async"
+                        className="service-image absolute inset-0 h-full w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+                      />
 
-                    {/* Number */}
-                    <span className="absolute right-3 top-3 md:right-4 md:top-4 rounded-full bg-black/40 size-12 md:size-20 flex items-center justify-center text-xl md:text-4xl backdrop-blur-sm tracking-tight ">
-                      {service.number}
-                    </span>
-                    <div className="absolute left-3 md:left-4 top-3 md:top-4 rounded-xl bg-black/20 px-4 py-2.5 flex flex-col items-center justify-center text-base font-medium backdrop-blur-md gap-1 xs:gap-2 md:gap-2.5">
-                      <span className="font-light text-sm md:text-base">
-                        Precios desde
+                      {/* Number */}
+                      <span className="absolute right-3 top-3 md:right-4 md:top-4 rounded-full bg-black/40 size-12 md:size-20 flex items-center justify-center text-xl md:text-4xl backdrop-blur-sm tracking-tight ">
+                        {service.number}
                       </span>
-                      <div className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl w-full flex flex-col  gap-0.5 tracking-tight">
-                        <span>${service.price}</span>
-                        <span className="text-xs md:text-sm font-light opacity-50 tracking-normal">
-                          {service.pricePeriod}
+                      <div className="absolute left-3 md:left-4 top-3 md:top-4 rounded-xl bg-black/20 px-4 py-2.5 flex flex-col items-center justify-center text-base font-medium backdrop-blur-md gap-1 xs:gap-2 md:gap-2.5">
+                        <span className="font-light text-sm md:text-base">
+                          Precios desde
                         </span>
+                        <div className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl w-full flex flex-col  gap-0.5 tracking-tight">
+                          <span>${service.price}</span>
+                          <span className="text-xs md:text-sm font-light opacity-50 tracking-normal">
+                            {service.pricePeriod}
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  {/* CONTENT */}
-                  <div className="service-content flex flex-col p-6 sm:p-8 lg:p-10 opacity-100">
-                    <div className="max-w-xl">
-                      <h3 className="text-3xl tracking-tighter sm:text-4xl lg:text-5xl">
-                        {service.title}
-                      </h3>
-                    </div>
-
-                    <div className="flex items-end gap-4 flex-col sm:flex-row md:flex-col lg:flex-row w-full justify-between">
-                      <div className="mt-4 md:mt-6 lg:mt-8">
-                        <p className="text-sm text-neutral-400 sm:text-base font-light">
-                          {service.description}
-                        </p>
-                        <p className="mt-3 text-sm text-neutral-300">
-                          <span className="font-medium text-lime-300">
-                            Forma de pago:
-                          </span>{" "}
-                          {service.paymentTerms}
-                        </p>
+                    {/* CONTENT */}
+                    <div className="service-content flex flex-col p-6 sm:p-8 lg:p-10 opacity-100">
+                      <div className="max-w-xl">
+                        <h3 className="text-3xl tracking-tighter sm:text-4xl lg:text-5xl">
+                          {service.title}
+                        </h3>
                       </div>
-                      <a
-                        href="#contacto"
-                        className="inline-flex w-fit shrink-0 items-center gap-1.5 border-b border-lime-300 pb-1 text-sm font-medium text-lime-300 transition-all duration-300 group-hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-lime-300 h-fit"
-                      >
-                        Cotizar servicio
-                        <ArrowUpRight className="size-4" />
-                      </a>
+
+                      <div className="flex items-end gap-4 flex-col sm:flex-row md:flex-col lg:flex-row w-full justify-between">
+                        <div className="mt-4 md:mt-6 lg:mt-8">
+                          <p className="text-sm text-neutral-400 sm:text-base font-light">
+                            {service.description}
+                          </p>
+                          <p className="mt-3 text-sm text-neutral-300">
+                            <span className="font-medium text-lime-300">
+                              Forma de pago:
+                            </span>{" "}
+                            {service.paymentTerms}
+                          </p>
+                        </div>
+                        <a
+                          href="#contacto"
+                          className="inline-flex w-fit shrink-0 items-center gap-1.5 border-b border-lime-300 pb-1 text-sm font-medium text-lime-300 transition-all duration-300 group-hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-lime-300 h-fit"
+                        >
+                          Cotizar servicio
+                          <ArrowUpRight className="size-4" />
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                </article>
+                  </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
 

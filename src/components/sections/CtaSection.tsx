@@ -45,7 +45,7 @@ export const CtaSection = () => {
       });
 
       mm.add("(prefers-reduced-motion: no-preference)", () => {
-        elements.forEach((element, index) => {
+        elements.forEach((element) => {
           gsap.fromTo(
             element,
             { opacity: 0, y: 24 },
@@ -54,10 +54,9 @@ export const CtaSection = () => {
               y: 0,
               duration: 0.7,
               ease: "power2.out",
-              delay: index * 0.08,
               scrollTrigger: {
                 trigger: element,
-                start: "top 92%",
+                start: "top 97%",
                 once: true,
               },
             }
@@ -168,7 +167,7 @@ export const CtaSection = () => {
 
         {/* SECONDARY CTA */}
         <a
-          ref={secondaryCtaRef}
+          ref={primaryCtaRef}
           href="#contacto"
           className="group mt-6 inline-flex w-fit items-center gap-1.5 border-b border-neutral-900/50 pb-1 text-base text-neutral-700 transition-all duration-300 hover:border-neutral-900 hover:text-neutral-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900"
         >

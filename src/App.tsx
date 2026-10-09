@@ -8,12 +8,13 @@ import BookingProcess from "./components/sections/BookingProcess";
 import Faq from "./components/sections/Faq";
 import CtaSection from "./components/sections/CtaSection";
 import Contact from "./components/sections/Contact";
+import Review from "./components/sections/Review";
 
 function App() {
   useEffect(() => {
     const lenis = new Lenis({
       autoRaf: true,
-      anchors: { offset: -96 },
+      anchors: true,
       respectReducedMotion: true,
       wheelMultiplier: 0.8,
       lerp: 0.05,
@@ -25,12 +26,15 @@ function App() {
   return (
     <div className="font-geist">
       <Header />
-      <Hero />
-      <Services />
-      <BookingProcess />
-      <Faq />
-      <Contact />
-      <CtaSection />
+      <main>
+        <Hero />
+        <Services />
+        <BookingProcess />
+        <Review />
+        <Faq />
+        <Contact />
+        <CtaSection />
+      </main>
       <Footer />
     </div>
   );

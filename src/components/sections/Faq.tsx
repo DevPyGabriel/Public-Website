@@ -179,7 +179,7 @@ export const Faq = () => {
     <section
       ref={sectionRef}
       id="preguntas-frecuentes"
-      className="bg-gray-100 py-20 text-neutral-800 md:py-24 lg:py-36 xl:py-46"
+      className="bg-gray-100 pb-20 text-neutral-800 md:pb-24 lg:pb-36 xl:pb-46"
       aria-labelledby="faq-title"
     >
       <div className="grid w-full grid-cols-[0.05fr_1fr_0.05fr] md:grid-cols-[0.05fr_2fr_0.05fr]">

@@ -19,6 +19,7 @@ export interface HeaderProps extends ComponentProps {
 const DEFAULT_ITEMS: HeaderNavItem[] = [
   { label: "Inicio", href: "#inicio" },
   { label: "Servicios", href: "#servicios" },
+  { label: "Reseñas", href: "#resenas" },
   { label: "FAQs", href: "#preguntas-frecuentes" },
   { label: "Contacto", href: "#contacto" },
 ];
@@ -115,8 +116,18 @@ export const Header = ({
   }, [placeRule]);
 
   useEffect(() => {
-    const sections = items
-      .map((item, index) => ({ index, element: resolveTarget(item.href) }))
+    const sectionMap = items.map((item, index) => {
+      if (item.href === "#servicios") {
+        return [
+          { index, element: resolveTarget("#servicios") },
+          { index, element: resolveTarget("#como-funciona") },
+        ];
+      }
+      return [{ index, element: resolveTarget(item.href) }];
+    });
+
+    const sections = sectionMap
+      .flat()
       .filter(
         (entry): entry is { index: number; element: HTMLElement } =>
           entry.element !== null
