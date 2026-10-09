@@ -7,18 +7,38 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencias
 node_modules
+
+# Build / salida
 dist
 dist-ssr
-*.local
+coverage
+.vite
 
-# Editor directories and files
+# Env (nunca subir secretos; conserva el ejemplo)
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# TypeScript
+*.tsbuildinfo
+
+# Vercel (estado local del CLI)
+.vercel
+.vercel/output
+
+# Editor y herramientas
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
