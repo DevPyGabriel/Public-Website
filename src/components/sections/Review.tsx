@@ -124,7 +124,7 @@ export const Review = () => {
     <section
       ref={sectionRef}
       id="resenas"
-      className="bg-gray-100 py-20 text-neutral-800 md:py-24 lg:py-36 xl:py-46"
+      className="bg-gray-100 pt-20 text-neutral-800 md:pt-24 lg:pt-36 xl:pt-46"
       aria-labelledby="review-title"
     >
       <div className="grid w-full grid-cols-[0.05fr_1fr_0.05fr] md:grid-cols-[0.05fr_2fr_0.05fr]">
