@@ -1,11 +1,225 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="apple-touch-icon" href="/opengraph_img.jpg" />
     <meta name="theme-color" content="#0a0a0a" />
-    <title>Nova Drive</title>
+
+    <!-- SEO PRIMARIO -->
+    <title>NovaDrive | Transporte y Taxi Express en Maracaibo, Zulia</title>
+    <meta
+      name="description"
+      content="NovaDrive: Taxi Express, transporte escolar, universitario y empresarial en Maracaibo, Zulia. Traslados cómodos, puntuales y adaptados a tus horarios. Cotiza por WhatsApp el mismo día."
+    />
+    <meta
+      name="keywords"
+      content="transporte Maracaibo, taxi express Maracaibo, transporte escolar Zulia, transporte universitario Maracaibo, transporte empresarial Zulia, traslado privado Maracaibo, NovaDrive"
+    />
+    <meta name="author" content="NovaDrive" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <link rel="canonical" href="%VITE_SITE_URL%/" />
+
+    <!-- GEO / LOCAL -->
+    <meta name="geo.region" content="VE-V" />
+    <meta name="geo.placename" content="Maracaibo, Zulia" />
+    <meta name="geo.position" content="10.6544;-71.6406" />
+    <meta name="ICBM" content="10.6544, -71.6406" />
+
+    <!-- VERIFICACIÓN GOOGLE SEARCH CONSOLE (reemplaza el valor por el de tu propiedad) -->
+    <meta name="google-site-verification" content="REEMPLAZA_CON_TU_CODIGO_DE_VERIFICACION" />
+
+    <!-- OPEN GRAPH (WhatsApp, Facebook, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="NovaDrive" />
+    <meta property="og:locale" content="es_VE" />
+    <meta property="og:url" content="%VITE_SITE_URL%/" />
+    <meta property="og:title" content="NovaDrive | Transporte y Taxi Express en Maracaibo, Zulia" />
+    <meta
+      property="og:description"
+      content="Taxi Express, transporte escolar, universitario y empresarial en Maracaibo. Traslados cómodos, puntuales y adaptados a tus horarios. Cotiza por WhatsApp."
+    />
+    <meta property="og:image" content="%VITE_SITE_URL%/opengraph_img.jpg" />
+    <meta property="og:image:secure_url" content="%VITE_SITE_URL%/opengraph_img.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="NovaDrive — transporte y taxi express en Maracaibo, Zulia" />
+
+    <!-- TWITTER / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="NovaDrive | Transporte y Taxi Express en Maracaibo, Zulia" />
+    <meta
+      name="twitter:description"
+      content="Taxi Express, transporte escolar, universitario y empresarial en Maracaibo. Cotiza tu traslado por WhatsApp el mismo día."
+    />
+    <meta name="twitter:image" content="%VITE_SITE_URL%/opengraph_img.jpg" />
+    <meta name="twitter:image:alt" content="NovaDrive — transporte y taxi express en Maracaibo, Zulia" />
+
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- DATOS ESTRUCTURADOS -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TaxiService",
+        "name": "NovaDrive",
+        "description": "Servicio de transporte en Maracaibo, Zulia: Taxi Express, transporte escolar, universitario y empresarial con traslados cómodos, puntuales y adaptados a tus horarios.",
+        "url": "%VITE_SITE_URL%/",
+        "image": "%VITE_SITE_URL%/opengraph_img.jpg",
+        "logo": "%VITE_SITE_URL%/logo.svg",
+        "telephone": "+584120753682",
+        "priceRange": "$$",
+        "currenciesAccepted": "USD, VES",
+        "areaServed": {
+          "@type": "City",
+          "name": "Maracaibo",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Maracaibo",
+            "addressRegion": "Zulia",
+            "addressCountry": "VE"
+          }
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Maracaibo",
+          "addressRegion": "Zulia",
+          "addressCountry": "VE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 10.6544,
+          "longitude": -71.6406
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Taxi Express",
+              "description": "Traslado privado para diligencias, citas o recorridos puntuales."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Transporte Escolar",
+              "description": "Traslados programados para la rutina escolar, coordinados con cada familia."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Transporte Universitario",
+              "description": "Traslados habituales hacia y desde la universidad según horarios de clases."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Transporte Empresarial",
+              "description": "Movilidad para equipos de trabajo con horarios y recorridos recurrentes."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cómo puedo solicitar un traslado o cotización?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Puedes hacerlo desde la sección de contacto o pulsando 'Cotizar traslado'. Solo necesitamos tu punto de partida, destino, tipo de servicio, fecha y horario para darte una respuesta rápida."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué servicios ofrecen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ofrecemos Taxi Express, Transporte Escolar, Transporte Universitario y Transporte Empresarial. Cada uno se adapta a tus recorridos y frecuencia (puntual o recurrente)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué zonas cubren?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Atendemos prioritariamente la zona de Sol Amada y sus alrededores en Maracaibo. Si necesitas una zona distinta, contáctanos directamente para consultar cupo y disponibilidad."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuál vehículo brinda el servicio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Brindamos el servicio en una Dodge Journey: un vehículo espacioso, con capacidad para 7 puestos y aire acondicionado en excelente estado para viajar fresco y cómodo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Con cuánta anticipación debo reservar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Para traslados puntuales recomendamos reservar con al menos 1–2 horas de anticipación. Para rutas escolares, universitarias o empresariales lo ideal es con unos días de anticipación."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué formas de pago aceptan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Trabajamos con acuerdo previo según el tipo de servicio. Los traslados puntuales suelen ser por viaje. Las rutas programadas se organizan con pago mensual o cada 15 días, según lo acordado."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Es seguro el servicio para menores de edad?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Para el Transporte Escolar priorizamos la seguridad, organización y puntualidad. Coordinamos los recorridos con cada familia y mantenemos información clara sobre horarios y puntos de recogida."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué garantiza la puntualidad?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Coordinamos horarios con base en la ruta, el tráfico y los puntos de recogida. Al tratarse de servicios programados, buscamos minimizar imprevistos y mantenemos comunicación clara con el cliente ante cualquier ajuste."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Hay un mínimo de pasajeros para activar una ruta?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No tenemos un mínimo fijo. Analizamos cada solicitud (zona, horarios y frecuencia). Si hay coincidencias de ruta, podemos optimizarla para hacerla viable para todos."
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

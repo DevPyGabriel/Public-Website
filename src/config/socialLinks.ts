@@ -14,7 +14,7 @@ export const WHATSAPP_SOCIAL_LINK = WA_NUMBER
 export const SOCIAL_LINKS = {
   whatsapp: WHATSAPP_SOCIAL_LINK,
   // p.ej. "https://instagram.com/novadriveve"
-  instagram: "",
+  instagram: "https://instagram.com/edwinfiu",
   // p.ej. "https://tiktok.com/@novadrive"
-  tiktok: "",
+  tiktok: "https://tiktok.com/@edwinfiury",
 };

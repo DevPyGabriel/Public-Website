@@ -9,6 +9,7 @@ import {
   TikTokIcon,
 } from "../ui/Icons";
 import { SOCIAL_LINKS } from "../../config/socialLinks";
+import { useLegal } from "../legal/legal-context";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,6 +33,7 @@ const socials = [
 
 export const Footer = () => {
   const footerRef = useRef<HTMLElement | null>(null);
+  const { openLegal } = useLegal();
 
   useEffect(() => {
     const root = footerRef.current;
@@ -208,6 +210,24 @@ export const Footer = () => {
               © {new Date().getFullYear()} NovaDrive. Todos los derechos
               reservados.
             </p>
+
+            <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:gap-6">
+              <button
+                type="button"
+                onClick={() => openLegal("terminos")}
+                className="cursor-pointer text-sm text-neutral-400 transition-colors duration-200 hover:text-lime-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-300"
+              >
+                Términos y Condiciones
+              </button>
+              <button
+                type="button"
+                onClick={() => openLegal("privacidad")}
+                className="cursor-pointer text-sm text-neutral-400 transition-colors duration-200 hover:text-lime-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-300"
+              >
+                Política de Privacidad y Cookies
+              </button>
+            </div>
+
             <a
               href="#inicio"
               className="group inline-flex w-fit items-center gap-1.5 text-sm text-neutral-400 transition-colors duration-200 hover:text-lime-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-300"

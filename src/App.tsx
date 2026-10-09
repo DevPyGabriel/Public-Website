@@ -9,6 +9,8 @@ import Faq from "./components/sections/Faq";
 import CtaSection from "./components/sections/CtaSection";
 import Contact from "./components/sections/Contact";
 import Review from "./components/sections/Review";
+import { LegalProvider } from "./components/legal/LegalContext";
+import { CookieConsent } from "./components/legal/CookieConsent";
 
 function App() {
   useEffect(() => {
@@ -24,19 +26,22 @@ function App() {
   }, []);
 
   return (
-    <div className="font-geist">
-      <Header />
-      <main>
-        <Hero />
-        <Services />
-        <BookingProcess />
-        <Review />
-        <Faq />
-        <Contact />
-        <CtaSection />
-      </main>
-      <Footer />
-    </div>
+    <LegalProvider>
+      <div className="font-geist">
+        <Header />
+        <main>
+          <Hero />
+          <Services />
+          <BookingProcess />
+          <Review />
+          <Faq />
+          <Contact />
+          <CtaSection />
+        </main>
+        <Footer />
+        <CookieConsent />
+      </div>
+    </LegalProvider>
   );
 }
 
