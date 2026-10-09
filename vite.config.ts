@@ -5,6 +5,18 @@ import path from "path";
 
 const SEO_LAST_MOD = new Date().toISOString().split("T")[0];
 
+// Reemplaza %VITE_SITE_URL% en index.html aunque la variable no esté definida
+// en el entorno de build (p. ej. Vercel), usando el dominio por defecto.
+function injectSiteUrl(siteUrl: string): Plugin {
+  return {
+    name: "inject-site-url",
+    enforce: "pre",
+    transformIndexHtml(html) {
+      return html.replaceAll("%VITE_SITE_URL%", siteUrl);
+    },
+  };
+}
+
 // Genera robots.txt y sitemap.xml usando el dominio de VITE_SITE_URL.
 function seoFiles(siteUrl: string): Plugin {
   return {
@@ -36,11 +48,12 @@ Sitemap: ${origin}/sitemap.xml
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
-  const siteUrl =
-    env.VITE_SITE_URL || "https://novadrive-ve.vercel.app";
+  const siteUrl = (
+    env.VITE_SITE_URL || "https://novadrive-ve.vercel.app"
+  ).replace(/\/+$/, "");
 
   return {
-    plugins: [react(), tailwindcss(), seoFiles(siteUrl)],
+    plugins: [react(), tailwindcss(), injectSiteUrl(siteUrl), seoFiles(siteUrl)],
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "./src"),
